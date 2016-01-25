@@ -267,7 +267,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(img/test.jpg);
+    background-image: url(img/agile-crickley-cropped.jpg);
     /*background-image: url(img/header-bg.jpg);*/
     background-position: center center;
     background-repeat: none;
@@ -295,8 +295,8 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: Raleway,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 200;
     line-height: 50px;
 }
 
@@ -307,7 +307,7 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 125px;
+        margin-bottom: 175px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
         font-style: italic;
@@ -318,8 +318,8 @@ header .intro-text .intro-heading {
         margin-bottom: 25px;
         text-transform: uppercase;
         font-family: Raleway,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 50px;
-        font-weight: 700;
+        font-size: 44px;
+        font-weight: 200;
         line-height: 75px;
     }
 }
