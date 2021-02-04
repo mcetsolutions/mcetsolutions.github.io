@@ -14,8 +14,8 @@ color:
 
 # Team names, titles and social links
 people:
-- name: Mark York
-  pic: 1
+- name: A Person
+  pic: 
   position: Lead Consultant
   social:
     - title: twitter
