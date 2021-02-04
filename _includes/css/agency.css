@@ -124,7 +124,7 @@ fieldset[disabled] .btn-primary.active {
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 700;
     color: #fff;
     background-color: #{{ site.color.primary }};
@@ -170,10 +170,17 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+@media(min-width:600px) {
+    .btn-xl {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+
 @media(min-width:768px) {
     .btn-xl {
-        font-size: 18px;
-        padding: 20px 40px;
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
 
@@ -270,66 +277,149 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
+.navbar-toggle {
+    /*padding: 5px 5px;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px*/
+}
+
+.navbar-toggle {
+    padding: 5px 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.navbar-toggle .icon-bar {
+    width: 16px;
+    height: 1.5px;
+}
+
+@media(max-width:480px) {
+    .navbar-toggle {
+        padding: 4px 4px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    .navbar-toggle .icon-bar {
+        width: 14px;
+        height: 1px;
+    }
+}
+
 header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(img/header-bg-jigsaw.jpg);
+    background-image: url(img/header-bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    position: relative;
+    height: 180px;
+    margin-top: 25px;
 }
 
 header .intro-text {
-    padding-top: 75px;
-    padding-bottom: 75px;
-    background-color: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    top: 40%;
+    left:0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 header .intro-text .intro-heading {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     font-family: Raleway,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 200;
-    line-height: 18px;
+    line-height: 14px;
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-style: italic;
-    line-height: 12px;
+    line-height: 10px;
 }
 
-@media(min-width:667px) {
-    header .intro-text .intro-heading {
+@media(min-width:375px) {
+    header {
         margin-top: 0px;
+        height: 225px;
+    } 
+
+    header .intro-text {
+        top: 50%;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 16px;
+        line-height: 16px;
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 75px;
+        font-size: 12px;
+        line-height: 12px;
     }
 }
 
-@media(min-width:736px) {
-    header .intro-text .intro-heading {
-        margin-top: 0px;
+@media(min-width:414px) {
+    header {
+        height: 250px;
     }
+}
 
-    header .intro-text .intro-lead-in {
-        margin-bottom: 100px;
+@media(min-width:600px) {
+    header {
+        height: 375px;
+    }    
+}
+
+@media(min-width:600px) and (max-height: 768px){
+    header {
+        height: 325px;
+    }    
+}
+
+@media(min-width:600px) and (max-height: 414px){
+    header {
+        height: 275px;
+    }    
+}
+
+@media(min-width:639px) {
+    header .intro-text {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media(min-width:639px) and (max-height: 1024px){
+    header .intro-text {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
 @media(min-width:768px) {
-    header .intro-text {
-        padding-top: 125px;
-        padding-bottom: 125px;
+    header {
+        height: 450px;
     }
 
     header .intro-text .intro-heading {
@@ -343,27 +433,33 @@ header .intro-text .intro-lead-in {
     }
 }
 
-@media(min-width:1366px) {
-    header .intro-text {
-        padding-bottom: 75px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 150px;
+@media(min-width:800px) {
+    header {
+        height: 450px;
     }
 }
 
-@media(min-width:1920px) {
-    header .intro-text {
-        padding-bottom: 125px;
+@media(min-width: 1024px) {
+    header {
+        height: 600px;
     }
+}
 
-    header .intro-text .intro-heading {
-        margin-top: 50px;
+@media(min-width: 1024px) and (max-height: 1600){
+    header {
+        height: 500px;
     }
+}
 
-    header .intro-text .intro-lead-in {
-        margin-bottom: 250px;
+@media(min-width: 1366px) {
+    header {
+        height: 550px;
+    }
+}
+
+@media(min-width: 1920px) {
+    header {
+        height: 650px;
     }
 }
 
@@ -374,7 +470,7 @@ section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 section h3.section-subheading {
@@ -390,17 +486,35 @@ header+section h3.section-subheading {
     margin-bottom: 20px;
 }
 
+h4, .h4 {
+    font-size: 15px
+}
+
+@media(min-width:375px) {
+    section h2.section-heading {
+        font-size: 20px;   
+    }
+
+    h4, .h4 {
+        font-size: 16px
+    }
+}
+
 @media(min-width:768px) {
     section {
         padding: 25px 0;
     }
 
     section h2.section-heading {
-        font-size: 40px;
+        font-size: 40px;   
     }
 
     section h3.section-subheading {
         font-size: 16px;
+    }
+
+    h4, .h4 {
+        font-size: 19px
     }
 }
 
