@@ -1,0 +1,70 @@
+---
+const services = [
+  {
+    title: 'Technical leadership',
+    body: 'Leading engineering teams through complex, fast-moving delivery — architecture decisions, code quality, and mentoring, in environments with tight deadlines and competing priorities.',
+  },
+  {
+    title: '.NET & cloud-native engineering',
+    body: 'Deep, hands-on .NET, C#, and ASP.NET Core development — microservices, event-driven architecture, CQRS and event sourcing, built for systems that can\u2019t afford to go down.',
+  },
+  {
+    title: 'Azure & AWS architecture',
+    body: 'Cloud-native platforms on Azure (AKS, Service Bus, APIM, Functions) and AWS, with infrastructure as code via Terraform, CloudFormation, or Bicep.',
+  },
+  {
+    title: 'Platform modernisation & performance',
+    body: 'Migrating legacy estates onto modern foundations, and diagnosing and fixing performance and reliability issues at scale — backed by observability, not guesswork.',
+  },
+];
+---
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Services</h2>
+      <p>Senior .NET and Azure expertise — from hands-on delivery to technical leadership.</p>
+    </div>
+
+    <div class="service-grid">
+      {services.map((s) => (
+        <div class="service">
+          <h3>{s.title}</h3>
+          <p>{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .service {
+    padding: 28px 30px 30px;
+    border-top: 3px solid var(--gold);
+    background: var(--paper-dim);
+  }
+
+  .service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .service p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  @media (max-width: 720px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

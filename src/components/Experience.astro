@@ -1,0 +1,104 @@
+---
+const roles = [
+  {
+    company: 'Global insurance — cyber programme',
+    period: '2026 – Present',
+    body: 'Providing .NET technical lead services and hands-on development for a global cyber insurance programme, delivered through a contract with <a href="https://esynergy.co.uk" target="_blank" rel="noopener">eSynergy</a>.',
+  },
+  {
+    company: 'Global technology — HPC platform',
+    period: '2025 – 2026',
+    body: 'Led an engineering team delivering core functionality for a large-scale distributed system supporting a wider HPC programme, and drove performance improvements through SQL and Kusto query optimisation.',
+  },
+  {
+    company: 'Regulated banking platform',
+    period: '2021 – 2024',
+    body: 'Delivered performance improvements to a high-throughput payments system and enhanced back-office systems for statements and financial reconciliation, while optimising regulatory reporting for compliance.',
+  },
+  {
+    company: 'National higher-education platform',
+    period: '2017 – 2020',
+    body: 'Helped design and build a payments platform, integrating payments across legacy and new applications and with an external financial records system.',
+  },
+];
+---
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected experience</h2>
+      <p>A few of the systems Mcet Consulting has helped deliver.</p>
+    </div>
+
+    <div class="roles">
+      {roles.map((r) => (
+        <div class="role">
+          <div class="role-head">
+            <h3>{r.company}</h3>
+            <span class="period">{r.period}</span>
+          </div>
+          <p set:html={r.body} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  #experience {
+    background: var(--paper-dim);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .roles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .role {
+    background: var(--paper);
+    padding: 26px 26px 28px;
+    border: 1px solid var(--line);
+  }
+
+  .role-head {
+    margin-bottom: 10px;
+  }
+
+  .role h3 {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .period {
+    display: inline-block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  .role p {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0;
+  }
+
+  .role p a {
+    color: var(--gold-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .role p a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .roles {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

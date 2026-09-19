@@ -1,0 +1,62 @@
+<section id="contact">
+  <svg class="watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="10" y="60" width="90" height="120" rx="10" />
+    <rect x="120" y="60" width="90" height="120" rx="10" />
+    <circle cx="105" cy="120" r="22" />
+  </svg>
+
+  <div class="wrap contact-inner">
+    <div class="section-head">
+      <h2>Get in touch</h2>
+      <p>Need help with any of the above — or something similar?</p>
+    </div>
+
+    <a class="btn email-btn" href="mailto:mark@mcet.net">
+      mark@mcet.net
+    </a>
+  </div>
+</section>
+
+<style>
+  #contact {
+    position: relative;
+    background: var(--navy);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  #contact .section-head p {
+    color: var(--navy-soft);
+  }
+
+  #contact h2 {
+    color: #fff;
+  }
+
+  .contact-inner {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+  }
+
+  .email-btn {
+    font-family: var(--font-mono);
+    font-size: 16px;
+  }
+
+  .watermark {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    height: 320px;
+    fill: rgba(224, 166, 58, 0.08);
+  }
+
+  @media (max-width: 780px) {
+    .watermark {
+      display: none;
+    }
+  }
+</style>

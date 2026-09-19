@@ -1,0 +1,52 @@
+---
+const stats = [
+  { value: '30+ years', label: 'delivering production software' },
+  { value: 'Banking, finance,\nengineering & education', label: 'sectors, public & private' },
+  { value: 'Enterprise-scale,\nregulated platforms', label: 'the kind of systems delivered' },
+];
+---
+
+<section class="stats-strip">
+  <div class="wrap stats-grid">
+    {stats.map((s) => (
+      <div class="stat">
+        <div class="stat-value">{s.value}</div>
+        <div class="stat-label">{s.label}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .stats-strip {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    white-space: pre-line;
+    line-height: 1.3;
+  }
+
+  .stat-label {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 720px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+  }
+</style>
