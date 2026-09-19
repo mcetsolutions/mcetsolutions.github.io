@@ -1,0 +1,101 @@
+---
+const stack = [
+  '.NET / C#',
+  'ASP.NET Core',
+  'Azure (AKS, Functions, Service Bus, APIM)',
+  'AWS',
+  'Kubernetes & Docker',
+  'Terraform',
+  'Event-driven architecture',
+  'SQL Server & Cosmos DB',
+];
+---
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <p>
+        Mcet Consulting Ltd is run by Mark York, a senior software engineer
+        with 30+ years' experience delivering large-scale, regulated,
+        distributed systems across banking, financial services,
+        engineering, and education — spanning both public and private
+        sector organisations.
+      </p>
+      <p>
+        Mark has been a trusted contributor on business-critical systems
+        across global technology, regulated banking, and national
+        education platforms, and specialises in .NET and cloud
+        infrastructure — Azure and AWS — with deep experience in
+        performance, reliability, and platform modernisation. Primarily a
+        back-end engineer, but well versed in full-stack delivery and
+        comfortable leading technical initiatives end to end.
+      </p>
+      <p class="linkedin-line">
+        <a href="https://www.linkedin.com/in/markyork/" target="_blank" rel="noopener">
+          Full career history on LinkedIn ↗
+        </a>
+      </p>
+    </div>
+
+    <div class="stack-panel">
+      <h3>Core stack</h3>
+      <div class="tags">
+        {stack.map((item) => (
+          <span class="tag">{item}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+  }
+
+  .linkedin-line {
+    margin-top: 24px;
+  }
+
+  .linkedin-line a {
+    color: var(--gold-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .linkedin-line a:hover {
+    text-decoration: underline;
+  }
+
+  .stack-panel {
+    border: 1px solid var(--line);
+    padding: 28px;
+    align-self: start;
+  }
+
+  .stack-panel h3 {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 780px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

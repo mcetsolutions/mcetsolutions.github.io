@@ -1,0 +1,28 @@
+---
+export interface Props {
+  size?: number;
+}
+const { size = 24 } = Astro.props;
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 32 32"
+  xmlns="http://www.w3.org/2000/svg"
+  class="puzzle-mark"
+  aria-hidden="true"
+>
+  <rect x="2" y="8" width="12" height="16" rx="2" class="piece piece-navy" />
+  <rect x="18" y="8" width="12" height="16" rx="2" class="piece piece-gold" />
+  <circle cx="16" cy="16" r="3.2" class="piece piece-gold" />
+</svg>
+
+<style>
+  .puzzle-mark .piece-navy {
+    fill: var(--navy);
+  }
+  .puzzle-mark .piece-gold {
+    fill: var(--gold);
+  }
+</style>

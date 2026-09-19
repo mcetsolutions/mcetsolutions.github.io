@@ -1,0 +1,74 @@
+---
+import PuzzleMark from './PuzzleMark.astro';
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#top" class="brand">
+      <PuzzleMark size={22} />
+      Mcet Consulting
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn nav-cta">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: none;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  nav a:hover {
+    color: var(--ink);
+  }
+
+  .nav-cta {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 560px) {
+    nav a:not(.nav-cta) {
+      display: none;
+    }
+  }
+</style>
