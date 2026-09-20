@@ -1,7 +1,7 @@
 # Mcet Consulting website
 
 Built with [Astro](https://astro.build). Deploys automatically to GitHub
-Pages via GitHub Actions on every push to `main`.
+Pages via GitHub Actions on every push to `master`.
 
 ## Local development
 
@@ -18,7 +18,7 @@ Opens at http://localhost:4321.
    `mcetsolutions.github.io` one — see note below).
 2. In the repo, go to **Settings → Pages** and set the source to
    **GitHub Actions** (not "Deploy from a branch").
-3. Push to `main` — the included workflow
+3. Push to `master` — the included workflow
    (`.github/workflows/deploy.yml`) builds the site and publishes it.
 4. Under **Settings → Pages → Custom domain**, enter
    `mcetconsulting.co.uk`. A `CNAME` file is already included in `public/`
